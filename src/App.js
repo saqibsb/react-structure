@@ -1,14 +1,17 @@
 import "./App.css";
-import BreedList from "./components/BreedList";
+import Home from "./components/landing/Home";
 import { BrowserRouter, Switch } from "react-router-dom";
-import SelectedBreed from "./components/SelectedBreed";
+import Registration from "./components/auth/registration";
+import LoginForm from "./components/auth/login";
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <BreedList exact path="/" />
-          <SelectedBreed exact path="/showDogImage/:name" />
+          {<Registration exact path="/register" />}
+          {<LoginForm exact path="/login" />}
+          <Home exact path="/" />
         </Switch>
       </BrowserRouter>
     </div>
